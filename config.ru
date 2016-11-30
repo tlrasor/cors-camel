@@ -61,8 +61,8 @@ end
 use Rack::ReverseProxy do
   # Set :preserve_host to true globally (default is true already)
   reverse_proxy_options preserve_host: true, matching: :first
-  reverse_proxy '/http://(.*)', 'http://$1', :timeout => 10
-  reverse_proxy '/https://(.*)', 'https://$1', :timeout => 10
+  reverse_proxy '/http://(.*)', 'http://$1', :timeout => 1
+  reverse_proxy '/https://(.*)', 'https://$1', :timeout => 1
 end
 
 

@@ -15,9 +15,6 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="#about">About</a>
-                    </li>
-                    <li>
                         <a href="#services">What is a CORS Proxy?</a>
                     </li>
                     <li>
@@ -43,17 +40,16 @@
                 <div class="col-lg-12">
                     <div class="intro-message">
                         <h1>CORS Camel</h1>
-                        <h3>Helping you across the cross-origin resource wasteland to the CORS oasis</h3>
+                        <h3>Your ticket to the CORS oasis</h3>
                         <hr class="intro-divider">
                         <form onsubmit="return false;">
                           <div class="form-group">
                             <label for="inputUrl">Your destination</label>
                             <input type="url" class="form-control" id="inputUrl" value="http://google.com" placeholder="http:// or https:// prefixed resource, e.g. http://google.com/">
                           </div>
-                          <button type="submit" class="btn btn-default" id="submitProxy">Hut hut hut!</button>
+                          <button type="submit" class="btn btn-default" id="submitProxy">Hut! Hut! Hut!</button>
                         </form>
                         <hr class="intro-divider">
-                        
                         <ul class="list-inline intro-social-buttons">
                             <li>
                                 <a href="<%= @twitter_profile %>" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
@@ -65,13 +61,10 @@
                     </div>
                 </div>
             </div>
-
         </div>
         <!-- /.container -->
-
     </div>
     <!-- /.intro-header -->
-
     <!-- Page Content -->
 
   <a  name="services"></a>
@@ -84,7 +77,7 @@
                     <div class="clearfix"></div>
                     <h2 class="section-heading">What is a CORS Proxy?</h2>
                     <p class="lead">
-                        A CORS proxy is a service that allows access to resources from resources and websites which do not support <a href="https://en.wikipedia.org/wiki/Cross-origin_resource_sharing">Cross-origin Resource Sharing (CORS)</a>. This allows developers working locally to use resources on the web and in the cloud without needing to add CORS to remote resources and allows access to legacy systems that do not yet support CORS.
+                        A CORS proxy is a service that allows access to resources from resources and websites which do not support <a href="https://en.wikipedia.org/wiki/Cross-origin_resource_sharing">Cross-origin Resource Sharing (CORS)</a>. This allows developers working locally to use resources on the web and in the cloud without needing to add CORS headers to remote resources and allows access to legacy systems that do not yet support CORS.
                     </p>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
@@ -108,7 +101,7 @@
                     <div class="clearfix"></div>
                     <h2 class="section-heading">How Does It Work?</h2>
                     <p class="lead">
-                        CORS Camel does the heavy lifting for you! When you make a request to the service it proxies the request to the resource and returns the response with the correct headers set for CORS compatability. This service has <a href="#limitations">limitations</a> but is fine for development use.
+                        CORS Camel does the heavy lifting for you! When you make a request to the service it proxies the request to the real resource and returns the response with the <a href="http://enable-cors.org/">correct headers set</a>. This service has <a href="#limitations">limitations</a> but is fine for development and experimental use.
                     </p>
                     <h3>How do I use CORS Camel?</h3>
                     <p class="lead">
@@ -143,7 +136,7 @@
                     <div class="clearfix"></div>
                     <h2 class="section-heading">Limitations</h2>
                     <p class="lead">
-                        Currently only HTTP GET requests are supported for CORS proxying. POST and other requests are being investigated. To comply with the Heroku AUP around operating a proxy, blacklists for banning abusers and aggressive rate limiting is used. Additionally, the current maximum response time is 10s to help weed out abusers. To help remove some of these limitations,  <a href="#contribute">consider donating to the project</a>.
+                        Only HTTP GET requests are supported for CORS proxying. POST and other methods are being investigated but we do not have the resources at this time to support additional features. Blacklists for banning abusers and aggressive rate limiting is used. To help remove some of these limitations, <a href="#contribute">consider donating to the project</a>.
                     </p>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
@@ -172,7 +165,18 @@
                     <p> <a href="http://reflectiveair.com/value-for-value/">The Reflective Air Podcast has a nice writeup on their use of the V4V Model.</a></p>
                     <h3> How can I give Value back?</h3>
                     <p class="lead">CORS Camel is Open Source Software. Please consider contributing improvements and tests to the codebase through <a href=<%= @github_profile %>>Github</a>.</p>
-                    <p class="lead">We will also accept financial contributions through <a href=<%= @paypal_link %>>Paypal</a> to pay for server capacity improvements.</p> 
+                    <p class="lead">
+                        We will also accept financial contributions to pay for server capacity improvements through Paypal: 
+                        
+                    </p> 
+                    <span>
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input type="hidden" name="encrypted" value="<%= @paypal_key %>">
+                            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+                    </span>
                 </div>
                 <div class="col-lg-5 col-sm-pull-6  col-sm-6">
                     <img class="img-responsive" src="img/contribute.png" alt="">
@@ -220,10 +224,6 @@
                     <ul class="list-inline">
                         <li>
                             <a href="#">Home</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <a href="#about">About</a>
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>
