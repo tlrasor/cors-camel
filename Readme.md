@@ -1,3 +1,5 @@
+# getCORS.com
+
 ## For more info on configuring the various middlewares:
 
 * [https://github.com/waterlink/rack-reverse-proxy]()
@@ -6,12 +8,9 @@
 
 ## config env vars
 
-GOOGLE_ANALYTICS_ID
-TWITTER_PROFILE
-GITHUB_PROFILE
-PAYPAL_LINK
+* GOOGLE_ANALYTICS_ID
+* TWITTER_PROFILE
+* GITHUB_PROFILE
+* PAYPAL_LINK
 
-BLACKLIST
-
-RACK_CONCURRENCY
-RACK_MAX_THREADS
+* BLACKLIST

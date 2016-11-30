@@ -52,7 +52,7 @@ window.isValidURL = (function() {// wrapped in self calling function to prevent 
     var desiredUrl = $("#inputUrl").val();
     if (isValidURL(desiredUrl)) {
       console.log("Proxying to: [" + desiredUrl + "]");
-      window.location = "http://corscamel.herokuapp.com/"+desiredUrl;
+      window.location = "http://getcors.com/"+desiredUrl;
     } else {
       alert("You have entered an invalid URL. Please review and try again.");
     }

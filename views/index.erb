@@ -9,7 +9,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand topnav" href="#">CORS Camel</a>
+                <a class="navbar-brand topnav" href="#">getCORS.com</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -39,14 +39,24 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="intro-message">
-                        <h1>CORS Camel</h1>
+                        <h1>getCORS.com</h1>
                         <h3>Your ticket to the CORS oasis</h3>
                         <hr class="intro-divider">
                         <form onsubmit="return false;">
-                          <div class="form-group">
-                            <label for="inputUrl">Your destination</label>
-                            <input type="url" class="form-control" id="inputUrl" value="http://google.com" placeholder="http:// or https:// prefixed resource, e.g. http://google.com/">
-                          </div>
+                            <div class="form-group">
+                                <label for="inputUrl">Your destination:</label>
+                                <input type="url" class="form-control" id="inputUrl" value="http://google.com" placeholder="http:// or https:// prefixed resource, e.g. http://google.com/">
+                            </div>
+                            <div id="sticky" class="form-group">
+                                <label for="foo">Leave this field blank</label>
+                                <input type="text" name="foo" id="inputSticky">
+                            </div>
+                            <script>
+                                (function () {
+                                    var e = document.getElementById("sticky");
+                                    e.parentNode.removeChild(e);
+                                })();
+                            </script>
                           <button type="submit" class="btn btn-default" id="submitProxy">Hut! Hut! Hut!</button>
                         </form>
                         <hr class="intro-divider">
@@ -101,14 +111,14 @@
                     <div class="clearfix"></div>
                     <h2 class="section-heading">How Does It Work?</h2>
                     <p class="lead">
-                        CORS Camel does the heavy lifting for you! When you make a request to the service it proxies the request to the real resource and returns the response with the <a href="http://enable-cors.org/">correct headers set</a>. This service has <a href="#limitations">limitations</a> but is fine for development and experimental use.
+                        getCORS.com does the heavy lifting for you! When you make a request to the service it proxies the request to the real resource and returns the response with the <a href="http://enable-cors.org/">correct headers set</a>. This service has <a href="#limitations">limitations</a> but is fine for development and experimental use.
                     </p>
-                    <h3>How do I use CORS Camel?</h3>
+                    <h3>How do I use getCORS.com?</h3>
                     <p class="lead">
-                        To use CORS Camel, append the resource you are looking for in the request to CORS Camel (or use the form above). For example, to proxy <code>http://google.com</code> make a request like this: 
+                        To use getCORS.com, append the resource you are looking for in the request to getCORS.com (or use the form above). For example, to proxy <code>http://google.com</code> make a request like this: 
                         <br />
-                        <a href="http://corscamel.herokuapp.com/http://google.com/">
-                            <code>http://corscamel.herokuapp.com/http://google.com/</code>
+                        <a href="http://getCORS.com/http://google.com/">
+                            <code>http://getCORS.com/http://google.com/</code>
                         </a>
                     </p>
                     <p>
@@ -160,11 +170,11 @@
                     <div class="clearfix"></div>
                     <h2 class="section-heading">Contributing</h2>
                     <p class="lead">
-                        CORS Camel is provided under the Value for Value (V4V) Model, popularized by <a href="http://www.noagendashow.com">The No Agenda Podcast</a>. In short, please give value if you have received value. The Value for Value Model is the only model that allows a non-biased, ad-free experience and is the most appropriate way to build community services on the web.
+                        getCORS.com is provided under the Value for Value (V4V) Model, popularized by <a href="http://www.noagendashow.com">The No Agenda Podcast</a>. In short, please give value if you have received value. The Value for Value Model is the only model that allows a non-biased, ad-free experience and is the most appropriate way to build community services on the web.
                     </p>
                     <p> <a href="http://reflectiveair.com/value-for-value/">The Reflective Air Podcast has a nice writeup on their use of the V4V Model.</a></p>
                     <h3> How can I give Value back?</h3>
-                    <p class="lead">CORS Camel is Open Source Software. Please consider contributing improvements and tests to the codebase through <a href=<%= @github_profile %>>Github</a>.</p>
+                    <p class="lead">getCORS.com is Open Source Software. Please consider contributing improvements and tests to the codebase through <a href=<%= @github_profile %>>Github</a>.</p>
                     <p class="lead">
                         We will also accept financial contributions to pay for server capacity improvements through Paypal: 
                         
@@ -196,7 +206,7 @@
 
             <div class="row">
                 <div class="col-lg-6">
-                    <h2>Connect to CORS Camel:</h2>
+                    <h2>Connect with getCORS.com:</h2>
                 </div>
                 <div class="col-lg-6">
                     <ul class="list-inline banner-social-buttons">
@@ -237,7 +247,7 @@
                             <a href="#contact">Contact</a>
                         </li>
                     </ul>
-                    <p class="copyright text-muted small">Copyright &copy; CORS Camel 2016. All Rights Reserved</p>
+                    <p class="copyright text-muted small">Copyright &copy; getCORS.com 2016. All Rights Reserved</p>
                 </div>
             </div>
         </div>
