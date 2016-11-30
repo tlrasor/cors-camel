@@ -21,6 +21,9 @@
                         <a href="#services">What is a CORS Proxy?</a>
                     </li>
                     <li>
+                        <a href="#contribute">Contribute!</a>
+                    </li>
+                    <li>
                         <a href="#contact">Contact</a>
                     </li>
                 </ul>
@@ -40,14 +43,14 @@
                 <div class="col-lg-12">
                     <div class="intro-message">
                         <h1>CORS Camel</h1>
-                        <h3>A free and easy CORS Proxy</h3>
+                        <h3>Helping you across the cross-origin resource wasteland to the CORS oasis</h3>
                         <hr class="intro-divider">
-                        <form>
+                        <form onsubmit="return false;">
                           <div class="form-group">
-                            <label for="exampleInputEmail1">Desired Resource URL</label>
-                            <input type="url" class="form-control" id="inputUrl" placeholder="http://corscamel.com/">
+                            <label for="inputUrl">Your destination</label>
+                            <input type="url" class="form-control" id="inputUrl" value="http://google.com" placeholder="http:// or https:// prefixed resource, e.g. http://google.com/">
                           </div>
-                          <button type="submit" class="btn btn-default">Proxy Me!</button>
+                          <button type="submit" class="btn btn-default" id="submitProxy">Hut hut hut!</button>
                         </form>
                         <hr class="intro-divider">
                         
@@ -105,14 +108,14 @@
                     <div class="clearfix"></div>
                     <h2 class="section-heading">How Does It Work?</h2>
                     <p class="lead">
-                        CORS Camel does the heavy lifting for you! When you make a request to the service it proxies the request to the resource and returns the response with the correct headers set for CORS compatability.
+                        CORS Camel does the heavy lifting for you! When you make a request to the service it proxies the request to the resource and returns the response with the correct headers set for CORS compatability. This service has <a href="#limitations">limitations</a> but is fine for development use.
                     </p>
                     <h3>How do I use CORS Camel?</h3>
                     <p class="lead">
                         To use CORS Camel, append the resource you are looking for in the request to CORS Camel (or use the form above). For example, to proxy <code>http://google.com</code> make a request like this: 
                         <br />
-                        <a href="http://codecamel.com/http://google.com/">
-                            <code>http://codecamel.com/http://google.com/</code>
+                        <a href="http://corscamel.herokuapp.com/http://google.com/">
+                            <code>http://corscamel.herokuapp.com/http://google.com/</code>
                         </a>
                     </p>
                     <p>
@@ -129,7 +132,7 @@
 
     </div>
     <!-- /.content-section-b -->
-
+    <a  name="limitations"></a>
     <div class="content-section-a">
 
         <div class="container">
@@ -140,7 +143,7 @@
                     <div class="clearfix"></div>
                     <h2 class="section-heading">Limitations</h2>
                     <p class="lead">
-                        Currently only HTTP GET requests are supported for CORS proxying. POST and other requests are being investigated. Additionally, the current maximum response time is 10s to help weed out abusers. For longer lasting requests consider forking the project and setting up a mirror.
+                        Currently only HTTP GET requests are supported for CORS proxying. POST and other requests are being investigated. To comply with the Heroku AUP around operating a proxy, blacklists for banning abusers and aggressive rate limiting is used. Additionally, the current maximum response time is 10s to help weed out abusers. To help remove some of these limitations,  <a href="#contribute">consider donating to the project</a>.
                     </p>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
@@ -153,7 +156,7 @@
 
     </div>
     <!-- /.content-section-a -->
-
+    <a  name="contribute"></a>
     <div class="content-section-b">
 
         <div class="container">
@@ -164,11 +167,12 @@
                     <div class="clearfix"></div>
                     <h2 class="section-heading">Contributing</h2>
                     <p class="lead">
-                        CORS Camel is provided under the Value for Value Model, popularized by <a href="http://www.noagendashow.com">The No Agenda Podcast</a>. In short, please give value if you have received value. The Value for Value Model is the only model that allows a non-biased, ad-free experience and is the most appropriate way to build community services on the web. Any funds received go towards running the service on Heroku and paying for capacity upgrades as more people continue to find value in the project.
+                        CORS Camel is provided under the Value for Value (V4V) Model, popularized by <a href="http://www.noagendashow.com">The No Agenda Podcast</a>. In short, please give value if you have received value. The Value for Value Model is the only model that allows a non-biased, ad-free experience and is the most appropriate way to build community services on the web.
                     </p>
+                    <p> <a href="http://reflectiveair.com/value-for-value/">The Reflective Air Podcast has a nice writeup on their use of the V4V Model.</a></p>
                     <h3> How can I give Value back?</h3>
                     <p class="lead">CORS Camel is Open Source Software. Please consider contributing improvements and tests to the codebase through <a href=<%= @github_profile %>>Github</a>.</p>
-                    <p class="lead">We also cheerfully accept financial contributions through <a href=<%= @paypal_link %>>Paypal</a>.</p> 
+                    <p class="lead">We will also accept financial contributions through <a href=<%= @paypal_link %>>Paypal</a> to pay for server capacity improvements.</p> 
                 </div>
                 <div class="col-lg-5 col-sm-pull-6  col-sm-6">
                     <img class="img-responsive" src="img/contribute.png" alt="">
@@ -224,6 +228,9 @@
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>
                             <a href="#services">What is a CORS Proxy?</a>
+                        </li>
+                          <li>
+                            <a href="#contribute">Contribute!</a>
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>
